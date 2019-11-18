@@ -15,7 +15,7 @@ public class BigBotNetworkClient {
     private final String token;
 
     public BigBotNetworkClient(String token) {
-        this.token= token;
+        this.token = token;
     }
 
     public void sendMessage(String ChannelID, String MessageContent, Color Color) throws IOException {
@@ -27,7 +27,7 @@ public class BigBotNetworkClient {
         Request request = new Request.Builder()
                 .url("https://discordapp.com/api/v6/channels/" + ChannelID + "/messages")
                 .post(body)
-                .addHeader("Authorization", token)
+                .addHeader("Authorization", "Bot " + token)
                 .build();
 
 
